@@ -13,7 +13,7 @@ const AllList = ({setModalShowntype, modalshownType}) => {
           alignItems: 'center',
         }}>
         <Text style={{fontSize: 20}}></Text>
-        <Text style={{fontSize: 20}}>My Modal</Text>
+        <Text style={{fontSize: 20, color: '#000'}}>My Modal</Text>
         <TouchableOpacity onPress={() => setModalShowntype(!modalshownType)}>
           <Text style={{fontSize: 20, color: 'blue'}}>Add</Text>
         </TouchableOpacity>

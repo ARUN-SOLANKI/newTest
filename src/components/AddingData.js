@@ -1,9 +1,15 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import MyButton from './MyButton';
 
-const AddingData = ({setModalShowntype, modalshownType}) => {
+const AddingData = ({
+  setModalShowntype,
+  modalshownType,
+  modalVisible,
+  setModalVisible,
+}) => {
   return (
     <View>
       <View
@@ -17,11 +23,11 @@ const AddingData = ({setModalShowntype, modalshownType}) => {
           <Text
             style={{fontSize: 35}}
             onPress={() => setModalShowntype(!modalshownType)}>
-            {'<'}
+            <Icon name="chevron-left" size={20} color="#000" />
           </Text>
         </TouchableOpacity>
-        <Text style={{fontSize: 25}}>AddingData</Text>
-        <Text style={{fontSize: 25}}></Text>
+        <Text style={{fontSize: 20, color: '#000'}}>Adding Data</Text>
+        <Text style={{fontSize: 20}}></Text>
       </View>
 
       <View>
@@ -38,7 +44,7 @@ const AddingData = ({setModalShowntype, modalshownType}) => {
           alignItems: 'center',
           marginTop: 35,
         }}>
-        <MyButton title="Add" onPress={() => console.log('addings')} />
+        <MyButton title="Add" onPress={() => setModalVisible(!modalVisible)} />
       </View>
     </View>
   );
