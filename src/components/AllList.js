@@ -1,8 +1,15 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
 import ListComponent from './ListComponent';
 
-const AllList = ({setModalShowntype, modalshownType}) => {
+const AllList = ({setModalShowntype, modalshownType, allData}) => {
+  console.log(allData, 'alllljjgugu');
   return (
     <View>
       <View
@@ -18,11 +25,11 @@ const AllList = ({setModalShowntype, modalshownType}) => {
           <Text style={{fontSize: 20, color: 'blue'}}>Add</Text>
         </TouchableOpacity>
       </View>
-      <View>
-        <ListComponent />
-        <ListComponent />
-        <ListComponent />
-      </View>
+      <ScrollView>
+        {allData?.map(item => {
+          return <ListComponent item={item} />;
+        })}
+      </ScrollView>
     </View>
   );
 };

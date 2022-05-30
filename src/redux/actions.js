@@ -2,18 +2,18 @@ import {
   ADD_TODO_SUCCESS,
   ADD_TODO_FAILURE,
   ADD_TODO_REQUEST,
+  ADD_TODO,
 } from './constants';
 
 import axios from 'axios';
 
-export const addTodo = str => {
+export const fetchData = () => {
   return dispatch => {
     dispatch(addTodoStarted());
-
     axios
-      .get(`https://randomuser.me/api/?results=10`)
+      .get(`https://gorest.co.in/public/v2/users`)
       .then(res => {
-        dispatch(addTodoSuccess({res: res, data: str}));
+        dispatch(addTodoSuccess(res.data));
       })
       .catch(err => {
         dispatch(addTodoFailure(err));
@@ -24,7 +24,7 @@ export const addTodo = str => {
 const addTodoSuccess = todo => ({
   type: ADD_TODO_SUCCESS,
   payload: {
-    ...todo,
+    todo,
   },
 });
 
@@ -37,4 +37,9 @@ const addTodoFailure = error => ({
   payload: {
     error,
   },
+});
+
+export const addTodo = str => ({
+  type: ADD_TODO,
+  payload: str,
 });

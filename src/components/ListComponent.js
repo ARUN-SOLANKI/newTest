@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const ListComponent = () => {
+const ListComponent = ({item}) => {
   return (
     <View
       style={{
@@ -10,7 +10,7 @@ const ListComponent = () => {
         marginVertical: 20,
         borderRadius: 15,
       }}>
-      <Text>some data fetch from redux saga and all</Text>
+      <Text>{item.name}</Text>
     </View>
   );
 };

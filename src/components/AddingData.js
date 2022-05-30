@@ -9,6 +9,8 @@ const AddingData = ({
   modalshownType,
   modalVisible,
   setModalVisible,
+  setInputText,
+  handleDone,
 }) => {
   return (
     <View>
@@ -36,6 +38,7 @@ const AddingData = ({
           style={{borderWidth: 1, borderRadius: 15, marginTop: 50}}
           multiline={true}
           numberOfLines={10}
+          onChangeText={e => setInputText(e)}
         />
       </View>
       <View
@@ -44,7 +47,7 @@ const AddingData = ({
           alignItems: 'center',
           marginTop: 35,
         }}>
-        <MyButton title="Add" onPress={() => setModalVisible(!modalVisible)} />
+        <MyButton title="Add" onPress={() => handleDone()} />
       </View>
     </View>
   );

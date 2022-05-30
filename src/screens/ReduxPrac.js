@@ -8,13 +8,9 @@ const ReduxPrac = () => {
   const dispatch = useDispatch();
   const data = useSelector(state => state);
 
-  console.log(data, '-------->');
-
   useEffect(() => {
     dispatch(addTodo('my name is arun'));
   }, []);
-
-  console.log(data, 'njasnkfbdj');
 
   return (
     <View>

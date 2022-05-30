@@ -8,6 +8,10 @@ const MyModal = ({
   setModalVisible,
   modalshownType,
   setModalShowntype,
+  inputText,
+  setInputText,
+  handleDone,
+  allData,
 }) => {
   return (
     <View style={styles.centeredView}>
@@ -27,6 +31,7 @@ const MyModal = ({
               setModalVisible={setModalVisible}
               modalshownType={modalshownType}
               setModalShowntype={setModalShowntype}
+              allData={allData}
             />
           ) : (
             <AddingData
@@ -34,6 +39,8 @@ const MyModal = ({
               setModalVisible={setModalVisible}
               modalshownType={modalshownType}
               setModalShowntype={setModalShowntype}
+              setInputText={setInputText}
+              handleDone={handleDone}
             />
           )}
         </View>
