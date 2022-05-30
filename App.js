@@ -5,7 +5,6 @@ import BottomTabs from './src/navigations/BottomTabs';
 
 import {store, persistor} from './src/redux/store';
 import {Provider} from 'react-redux';
-import ReduxPrac from './src/screens/ReduxPrac';
 import {PersistGate} from 'redux-persist/integration/react';
 
 const App = () => {

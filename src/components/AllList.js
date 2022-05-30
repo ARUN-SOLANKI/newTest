@@ -25,7 +25,7 @@ const AllList = ({setModalShowntype, modalshownType, allData}) => {
           <Text style={{fontSize: 20, color: 'blue'}}>Add</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         {allData?.map(item => {
           return <ListComponent item={item} />;
         })}
