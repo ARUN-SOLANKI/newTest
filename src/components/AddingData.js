@@ -7,8 +7,7 @@ import MyButton from './MyButton';
 const AddingData = ({
   setModalShowntype,
   modalshownType,
-  modalVisible,
-  setModalVisible,
+
   setInputText,
   handleDone,
 }) => {

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
+import React from 'react';
+import {Alert, Modal, StyleSheet, View} from 'react-native';
 import AddingData from './AddingData';
 import AllList from './AllList';
 
@@ -8,7 +8,6 @@ const MyModal = ({
   setModalVisible,
   modalshownType,
   setModalShowntype,
-  inputText,
   setInputText,
   handleDone,
   allData,
